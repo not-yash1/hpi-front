@@ -1,9 +1,5 @@
 @import url('../../Fonts/style.css');
 
-* {
-    overflow: visible;
-}
-
 .prop-container {
     /* border: 2px solid red; */
     height: 150vh;

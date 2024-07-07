@@ -16,19 +16,27 @@ function Landing() {
         <div className="section2">
           <Home />
         </div>
-        <div className="section" style={{marginBottom: '150px'}}>
+        <div className="section" 
+        style={{marginBottom: '150px'}}
+        >
           <About />
         </div>
         <div className="section">
           <Properties />
         </div>
-        <div className="section" style={{marginBottom: '150px', marginTop: '100px'}}>
+        <div className="section" 
+        style={{marginBottom: '150px', marginTop: '100px'}}
+        >
           <Testimonial />
         </div>
-        <div className="section" style={{marginBottom: '150px'}}>
+        <div className="section" 
+        style={{marginBottom: '150px'}}
+        >
           <Blogs />
         </div>
-        <div className="section" style={{marginBottom: '150px'}}>
+        <div className="section" 
+        style={{marginBottom: '150px'}}
+        >
           <Details />
         </div>
         <div className="section" style={{

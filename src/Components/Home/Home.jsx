@@ -9,14 +9,14 @@ const Home = () => {
 
     const contactClick = () => {
         window.scrollBy({
-            top: window.innerHeight*8.2 + 56*7, // 600vh
-            behavior: 'smooth' // This adds a smooth scrolling effect
+            top: window.innerHeight*8.4 + 156*6 - 112,
+            behavior: 'smooth'
         });
     }
 
     const propertiesClick = () => {
         window.scrollBy({
-            top: (window.innerHeight + 56)*2, // 600vh
+            top: (window.innerHeight + 131)*2, // 600vh
             behavior: 'smooth' // This adds a smooth scrolling effect
         });
     }
@@ -44,14 +44,6 @@ const Home = () => {
                         padding: '6px',
                         border: '2px solid rgb(14, 40, 71)'
                     }} />
-                    {/* <MdPhoneInTalk style={{
-                        color: 'rgba(14, 40, 71, 0.9)',
-                        height: '32px',
-                        width: '32px',
-                        borderRadius: '50%',
-                        padding: '4px',
-                        border: '2px solid rgb(14, 40, 71)'
-                    }} /> */}
                 </button>
                 <button onClick={propertiesClick} className='right-btn'>
                     <p>View all properties</p>

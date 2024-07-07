@@ -1,5 +1,6 @@
 @import url('../../Fonts/style.css');
 
+
 .home-container {
     /* border: 2px solid red; */
     display: flex;
@@ -11,7 +12,6 @@
     overflow: hidden;
     /* gap: 20px; */
     padding: 0px 20px;
-    margin-bottom: 28px;
 }
 
 .home-container .left-sec {
