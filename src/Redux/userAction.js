@@ -1,6 +1,7 @@
 import axios from "axios"
 
-const serverUrl = "http://localhost:8080/api/v1"
+// const serverUrl = "http://localhost:8080/api/v1"
+const serverUrl = "https://hpi-back.onrender.com"
 
 const files = [
     "The Emperor.pdf", "The Crown.pdf", "LIC.pdf"
