@@ -1,0 +1,140 @@
+@import url('../../Fonts/style.css');
+
+.review-contain {
+    /* border: 2px solid red; */
+    height: 100vh;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6.5% 4%;
+    padding: 52px 57px;
+}
+
+.review-contain .review-box {
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-contain .review-box .btns {
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .review-contain .review-box .left {
+    width: 7%;
+} */
+
+.review-contain .review-box .left button {
+    margin-left: -40%;
+}
+
+.review-contain .review-box .right button {
+    margin-right: -40%;
+}
+
+.review-contain .review-box .btns button {
+    border: 2px solid rgb(14, 40, 71);
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-contain .review-box .btns .disable {
+    border: 2px solid rgba(14, 40, 71, 0.4) !important;
+}
+
+.review-contain .review-box .img {
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 34%;
+    background: rgba(209, 222, 225, 0.19);
+}
+
+.review-contain .review-box .img img {
+    height: 100%;
+    width: 100%;
+}
+
+.review-contain .review-box .cont {
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* text-align: left; */
+    /* padding: 6.7% 8.7%; */
+    padding: 50px;
+    padding-top: 120px;
+    gap: 7.8%;
+    background: rgba(209, 222, 225, 0.19);
+}
+
+.review-contain .review-box .cont img {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /* top: 6.7%;
+    left: 8.7%; */
+    background: none;
+}
+
+.review-contain .review-box .cont p {
+    color: rgba(14, 40, 71, 0.70);
+    font-family: "PP Neue Montreal Book";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 42px */
+    letter-spacing: -0.6px;
+    background: none;
+}
+
+.review-contain .review-box .cont .user {
+    /* border: 2px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: left;
+    /* gap: 10px; */
+}
+
+.review-contain .review-box .cont .user h3 {
+    color: #0E2847;
+    text-align: center;
+    font-family: "PP Neue Montreal Book";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    text-align: left;
+}
+
+.review-contain .review-box .cont .user h4 {
+    color: #0E2847;
+    text-align: center;
+    font-family: "PP Neue Montreal Book";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}

@@ -1,18 +1,22 @@
 import './Landing.css';
 import Blogs from './Components/Blogs/Blogs';
 import Contact from './Components/Contact/Contact';
-import Details from './Components/Details/Details';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import About from './Components/Land2/About';
 import Properties from './Components/Properties/Properties';
-import Reviews from './Components/Reviews/Reviews';
 import Slider from './Components/Slideshow/Slider';
 import Testimonial from './Components/Testimonials/Testimonial';
+import Intro from './Components/Intro/Intro';
+import Overview from './Components/Overview/Overview';
+import Review from './Components/Reviews/Review';
 
 function Landing() {
   return (
       <div className='landing'>
+        <div className="section2">
+          <Intro />
+        </div>
         <div className="section2">
           <Home />
         </div>
@@ -34,10 +38,15 @@ function Landing() {
         >
           <Blogs />
         </div>
-        <div className="section" 
+        {/* <div className="section" 
         style={{marginBottom: '150px'}}
         >
           <Details />
+        </div> */}
+        <div className="section" 
+        style={{}}
+        >
+          <Overview />
         </div>
         <div className="section" style={{
           overflowX: 'hidden',
@@ -45,8 +54,11 @@ function Landing() {
         }}>
           <Slider />
         </div>
-        <div className="section1">
+        {/* <div className="section1">
           <Reviews />
+        </div> */}
+        <div className="section1">
+          <Review />
         </div>
         <div className="section1">
           <Contact />

@@ -9,7 +9,7 @@ const Home = () => {
 
     const contactClick = () => {
         window.scrollBy({
-            top: window.innerHeight*8.4 + 156*6 - 112,
+            top: window.innerHeight*8.4 + 156*5 - 112,
             behavior: 'smooth'
         });
     }
@@ -25,7 +25,7 @@ const Home = () => {
     <div className='home-container'>
         <div className="left-sec">
             <div className="left-1">
-                <img src={logo} alt="logo" className='logo' />
+                <img src={logo} alt="Building" className='logo' />
             </div>
             <div className="left-2">
                 <h2>BUILDING YOUR DREAMS</h2>
@@ -57,7 +57,7 @@ const Home = () => {
             </div>
         </div>
         <div className="right-sec">
-            <img src={img4} alt="Building Image" className='building-image' />
+            <img src={img4} alt="Building" className='building-image' />
         </div>
       
     </div>
