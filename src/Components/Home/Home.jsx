@@ -24,9 +24,9 @@ const Home = () => {
   return (
     <div className='home-container'>
         <div className="left-sec">
-            <div className="left-1">
+            {/* <div className="left-1">
                 <img src={logo} alt="Building" className='logo' />
-            </div>
+            </div> */}
             <div className="left-2">
                 <h2>BUILDING YOUR DREAMS</h2>
                 <h1>Real Estate in Bihar :</h1>
