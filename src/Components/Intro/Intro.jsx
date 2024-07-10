@@ -9,12 +9,12 @@ const Intro = () => {
 
     const vidRef = useRef(null)
 
-    const [volume, setVolume] = useState(true);
+    const [volume, setVolume] = useState(false);
     const styles = {
         height: '100%',
         width: '100%',
         background: 'none',
-        color: 'white',
+        color: '#F7F7F7',
     }
 
     useEffect(() => {
@@ -26,12 +26,10 @@ const Intro = () => {
   return (
     <div className='intro-container'>
         <img src={logo} alt="Logo" />
-        <video ref={vidRef} src={vid} autoPlay muted={!volume} loop alt="Intro Video">Your browser does not support the video tag</video>
+        <video ref={vidRef} src={vid} autoPlay playsInline muted={!volume} loop alt="Intro Video">Your browser does not support the video tag</video>
         <button onClick={() => setVolume(!volume)}>
             {volume ? <RxSpeakerLoud style={styles}/> : <RxSpeakerOff style={styles}/>}
-            {/* <RxSpeakerOff style={styles}/> */}
         </button>
-      
     </div>
   )
 }
