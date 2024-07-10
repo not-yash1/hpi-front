@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: flex-start;
     /* text-align: left; */
     /* padding: 6.7% 8.7%; */
@@ -96,6 +96,9 @@
 }
 
 .review-contain .review-box .cont p {
+    position: absolute;
+    top: 90px;
+    left: 50px;
     color: rgba(14, 40, 71, 0.70);
     font-family: "PP Neue Montreal Book";
     font-size: 30px;
