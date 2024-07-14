@@ -5,6 +5,7 @@ import { CiMail } from "react-icons/ci";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandFacebook } from "react-icons/tb";
+import { SlSocialYoutube } from "react-icons/sl";
 
 const Footer = () => {
   return (
@@ -27,17 +28,21 @@ const Footer = () => {
       </div>
       <div className="socials">
         <div className="icons">
-            <a target='blank' href="https://x.com"><RiTwitterXLine style={{
-                    backgroundColor: 'rgb(14, 40, 71)',
-                    color: 'rgb(225, 228, 232)'
-                }} /> </a>
+            <a target='blank' href="https://x.com"><SlSocialYoutube style={{
+                backgroundColor: 'rgb(14, 40, 71)',
+                color: 'rgb(225, 228, 232)'
+            }} /> </a>
+            {/* <a target='blank' href="https://x.com"><RiTwitterXLine style={{
+                backgroundColor: 'rgb(14, 40, 71)',
+                color: 'rgb(225, 228, 232)'
+            }} /> </a> */}
 
             <a target='blank' href="https://instagram.com"><FaInstagram style={{
-                    backgroundColor: 'rgb(14, 40, 71)',
-                    color: 'rgb(225, 228, 232)',
-                    width: '25px',
-                    height: '25px',
-                }} /> </a>
+                backgroundColor: 'rgb(14, 40, 71)',
+                color: 'rgb(225, 228, 232)',
+                width: '25px',
+                height: '25px',
+            }} /> </a>
                 
             <a target='blank' href="https://facebook.com"><TbBrandFacebook style={{
                     backgroundColor: 'rgb(14, 40, 71)',

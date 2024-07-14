@@ -25,6 +25,9 @@ function Landing() {
         >
           <About />
         </div>
+        <div className="section1">
+          <Review />
+        </div>
         <div className="section">
           <Properties />
         </div>
@@ -57,9 +60,6 @@ function Landing() {
         {/* <div className="section1">
           <Reviews />
         </div> */}
-        <div className="section1">
-          <Review />
-        </div>
         <div className="section1">
           <Contact />
         </div>

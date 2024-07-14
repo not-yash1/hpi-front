@@ -124,7 +124,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 3%;
+    gap: 4%;
 }
 
 .overview-container .overview-body .body-left .left-content .content .veg {
@@ -133,11 +133,29 @@
     /* border: 1px solid aqua; */
 }
 
-.overview-container .overview-body .body-left .left-content .content h4 {
+.overview-container .overview-body .body-left .left-content .content .sub-content {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    width: 76%;
+}
+
+.overview-container .overview-body .body-left .left-content .content .sub-content h4 {
     color: #0E2847;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.4px;
+}
+
+.overview-container .overview-body .body-left .left-content .content .sub-content h6 {
+    color: rgba(14, 40, 71, 0.60);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.28px;
 }

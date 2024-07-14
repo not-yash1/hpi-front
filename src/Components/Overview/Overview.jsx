@@ -24,26 +24,30 @@ const Overview = () => {
                         <div className="veg">
                             <img src={veg} alt="Veg" />
                         </div>
-                        <h4>Eco friendly practices</h4>
+                        <div className="sub-content">
+                            <h4>Eco-friendly practices</h4>
+                            <h6>Passive Solar Design, Insulation, Recycled and Reclaimed Materials, Drought-Resistant Landscaping, Natural Ventilation, Daylighting</h6>
+                        </div>
                     </div>
                     <div className="content cont1">
                         <div className="veg">
                             <img src={veg} alt="Veg" />
                         </div>
-                        <h4>Green spaces</h4>
+                        <div className="sub-content">
+                            <h4>Sustainable design</h4>
+                            <h6>Low carbon footprint and reduced demand for natural resources</h6>
+                        </div>
                     </div>
                     <div className="content cont1">
                         <div className="veg">
                             <img src={veg} alt="Veg" />
                         </div>
-                        <h4>Landscaping</h4>
-                    </div>
-                    <div className="content cont1">
-                        <div className="veg">
-                            <img src={veg} alt="Veg" />
+                        <div className="sub-content">
+                            <h4>Green spaces</h4>
+                            <h6>Installing vegetation on roofs and walls to improve insulation, reduce urban heat islands, and enhance air quality</h6>
                         </div>
-                        <h4>Sustainable design</h4>
                     </div>
+
                 </div>
             </div>
             <div className="body-right"></div>

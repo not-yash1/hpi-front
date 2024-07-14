@@ -83,8 +83,10 @@ const Contact = () => {
                 <button disabled={!btn || loading} className={(!btn || loading) ? 'disable-btn' : ''} type='submit' onClick={handleSubmit}>
                     <p>Send Details</p>
                     <CallMadeIcon sx={{
-                        backgroundColor: (btn || !loading) ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)',
+                        backgroundColor: (btn && !loading) ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)',
                         color: (btn || !loading) ? 'rgb(14, 40, 71)' : 'rgba(14, 40, 71, 0.6)',
+                        height: '120%',
+                        width: '12%',
                         borderRadius: '50%',
                         padding: '4px',
                         marginTop: '-2px'

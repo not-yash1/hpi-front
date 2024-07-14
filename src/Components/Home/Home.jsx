@@ -9,14 +9,14 @@ const Home = () => {
 
     const contactClick = () => {
         window.scrollBy({
-            top: window.innerHeight*8.4 + 156*5 - 112,
+            top: window.innerHeight*8.6 + 156*5 - 112,
             behavior: 'smooth'
         });
     }
 
     const propertiesClick = () => {
         window.scrollBy({
-            top: (window.innerHeight + 131)*2, // 600vh
+            top: (window.innerHeight*1.5 + 131)*2, // 600vh
             behavior: 'smooth' // This adds a smooth scrolling effect
         });
     }

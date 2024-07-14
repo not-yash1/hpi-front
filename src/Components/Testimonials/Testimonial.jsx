@@ -88,7 +88,7 @@ const Testimonial = () => {
       } else{
         setCurrInd(currInd + 1);
       }
-    }, 3000)
+    }, 9000)
     return () => clearInterval(interval)
 
   }, [currInd])
