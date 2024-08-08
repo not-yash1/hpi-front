@@ -192,7 +192,7 @@ const Properties = ({ isOpen, onClose }) => {
                             </div>
                         </div>
                         <div className="caraousel-img-name">
-                            The Emperor
+                            The Crown
                         </div>
                     </div>
                     <div className="caraousel-item" onClick={() => handleOpen(1)}>
@@ -230,7 +230,7 @@ const Properties = ({ isOpen, onClose }) => {
                             </div>
                         </div>
                         <div className="caraousel-img-name">
-                            The Crown
+                            The Emperor
                         </div>
                     </div>
                     <div className="caraousel-item" onClick={() => handleOpen(2)}>

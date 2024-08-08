@@ -188,11 +188,11 @@
 }
 
 .prop-container .prop-caraousel .caraousel-track .caraousel-item:nth-child(1) .caraousel-img {
-    background: url('../../images/img3.jpg') lightgray 50% / cover no-repeat;
+    background: url('../../images/img15.jpg') lightgray 50% / cover no-repeat;
 }
 
 .prop-container .prop-caraousel .caraousel-track .caraousel-item:nth-child(2) .caraousel-img {
-    background: url('../../images/img15.jpg') lightgray 50% / cover no-repeat;
+    background: url('../../images/img3.jpg') lightgray 50% / cover no-repeat;
 }
 
 .prop-container .prop-caraousel .caraousel-track .caraousel-item:nth-child(3) .caraousel-img {

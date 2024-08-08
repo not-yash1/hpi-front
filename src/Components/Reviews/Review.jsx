@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Review.css'
 // import bod1 from '../../images/bod1.png'
 // import bod2 from '../../images/bod2.png'
@@ -10,68 +10,94 @@ import { FaAngleLeft } from "react-icons/fa";
 const Review = () => {
 
     const [reviews, setReviews] = useState([
-        {
-          name: "Sujal Keshri",
-          image: bod11,
-          review: "As a director of real estate, I am incredibly proud of the transformative experiences we create for our clients. Our commitment to excellence, integrity and innovation sets us apart in the industry. We go beyond transactions, we build relationships and dreams. It's not just about properties; it's about crafting legacies and shaping futures.",
-          designation: "Director, Hira Panna Infra LLP"
-        },
-        {
-          name: "Sharad Keshri2",
-          // image: bod2,
-          image: "https://randomuser.me/api/portraits/men/2.jpg",
-          review: "As a director of real estate, I am incredibly proud of the transformative experiences we create for our clients. Our commitment to excellence, integrity and innovation sets us apart in the industry.",
-          designation: "Director, Hira Panna Infra LLP"
-        },
-        {
-          name: "Sharad Keshri3",
-          // image: bod1,
-          image: "https://randomuser.me/api/portraits/men/3.jpg",
-          review: "As a director of real estate, I am incredibly proud of the transformative experiences we create for our clients. Our commitment to excellence, integrity and innovation sets us apart in the industry. We go beyond transactions, we build relationships and dreams. It's not just about properties; it's about crafting legacies and shaping futures.",
-          designation: "Director, Hira Panna Infra LLP"
-        },
-        {
-          name: "Sharad Keshri4",
-          // image: bod2,
-          image: "https://randomuser.me/api/portraits/men/4.jpg",
-          review: "As a director of real estate, I am incredibly proud of the transformative experiences we create for our clients. Our commitment to excellence, integrity and innovation sets us apart in the industry. We go beyond transactions, we build relationships and dreams.",
-          designation: "Director, Hira Panna Infra LLP"
-        },
+      {
+        name: "Sharad Keshri",
+        image: bod11,
+        review: "Spaces touch life in myriad ways. At Hira Panna we ensure that the relationship between these spaces and the lives ensconced in or around them feel truly enriched. Over the past years, we have built an unparallel brand repute through our aesthetic design and consistent quality construction that are at par with National benchmarks. Innovation in our offerings alongside an emphasis on contemporary architecture, strong project execution and partnerships withe the best across the country, position us as pioneers of luxurious living.",
+        designation: "Director, Hira Panna Infra LLP"
+      },
+      {
+        name: "Sujal Keshri",
+        // image: bod2,
+        image: "https://randomuser.me/api/portraits/men/2.jpg",
+        review: "As a director of real estate, I am incredibly proud of the transformative experiences we create for our clients. Our commitment to excellence, integrity and innovation sets us apart in the industry. We go beyond transactions, we build relationships and dreams. It's not just about properties; it's about crafting legacies and shaping futures.",
+        designation: "Head of Operations, Hira Panna Infra"
+      },
+      {
+        name: "Rita Keshri",
+        // image: bod1,
+        image: "https://randomuser.me/api/portraits/men/3.jpg",
+        review: "At Hira Panna Infra, we believe that a home is more than just a place to live---it is a sanctuary, a space where cherished memories are created, and dreams are realised. Our commitment to excellence is reflected in every aspect, from the meticulously crafted residences to the thoughtfully designed amenities. We have spared no effort in creating homes that are both luxurious and environmentally responsible.",
+        designation: "Managing Director, Hira Panna Infra LLP"
+      },
+      {
+        name: "Sharad Keshri4",
+        // image: bod2,
+        image: "https://randomuser.me/api/portraits/men/4.jpg",
+        review: "As a director of real estate, I am incredibly proud of the transformative experiences we create for our clients. Our commitment to excellence, integrity and innovation sets us apart in the industry. We go beyond transactions, we build relationships and dreams.",
+        designation: "Director, Hira Panna Infra LLP"
+      },
     ])
 
     const[val, setVal] = useState(reviews[0]);
 
-    const[ind, setInd] = useState(0);
-    const [isLeft, setIsLeft] = useState(false);
-    const [isRight, setIsRight] = useState(true);
+    const [currInd, setCurrInd] = useState(1);
+    const [activSlide, setActivSlide] = useState("");
+    const [activNav, setActivNav] = useState("");
 
-    const handleLeftClick = () => {
-        if(ind === 1){
-          setIsLeft(false);
-        }
-        setIsRight(true)
-        setVal((reviews[ind-1]))
-        setInd(ind - 1);
+    const handleNavigate = (ind) => {
+      setCurrInd(ind);
+    }
+
+    useEffect(() => {
+      const slide = document.querySelector('.box');
+      const navBtn = document.querySelector('.rev-btn');
+      setActivSlide(slide);
+      setActivNav(navBtn);
+      // if(slide){
+      //   slide.classList.add('visible-div');
+      // }
+      if(navBtn){
+        navBtn.classList.add('vis-nav');
       }
-    
-      const handleRightClick = () => {
-        if(ind === reviews.length-2){
-          setIsRight(false)
+    }, [])
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        const slide = document.querySelector(`.box${currInd}`);
+        const slides = document.querySelectorAll(`.box`);
+        const nav = document.querySelector(`.rev${currInd}`);
+
+        if(activNav){
+          activNav.classList.remove('vis-nav')
         }
-        setIsLeft(true);
-        setVal((reviews[ind+1]))
-        setInd(ind+1);
-      }
+        if(nav){
+          nav.classList.add('vis-nav')
+        }
+        if(slides[currInd - 1]){
+          // slides[currInd - 1].classList.add('visible-div')
+          slides.forEach((slide) => {
+            slide.style.transform = `translateX(-${(currInd-1) * 100}vw)`;
+          });
+        }
+
+        setActivNav(nav);
+        setActivSlide(slide);
+        if(currInd === 3){
+          setCurrInd(1);
+        } else{
+          setCurrInd(currInd + 1);
+        }
+      }, 9000)
+
+      return () => clearInterval(interval)
+
+    }, [currInd])
 
   return (
     <div className='review-contain'>
-        <div className="review-box">
-            <div className="left btns">
-                <button disabled={!isLeft} className={`left-arrow ${isLeft ? "" : "disable"}`} onClick={handleLeftClick}><FaAngleLeft /></button>
-            </div>
-            <div className="img">
-                <img src={val.image} alt={val.name} />
-            </div>
+      <div className="rev-box">
+        <div className="review-box box box1">
             <div className="cont">
                 <img src={comma} alt="comma" />
                 <p>{val.review}</p>
@@ -80,10 +106,42 @@ const Review = () => {
                     <h4>{val.designation}</h4>
                 </div>
             </div>
-            <div className="right btns">
-            <button disabled={!isRight} className={`right-arrow ${isRight ? "" : "disable"}`} onClick={handleRightClick}><FaAngleRight /></button>
+            <div className="img">
+                <img src={val.image} alt={val.name} />
             </div>
         </div>
+        <div className="review-box box box2">
+            <div className="cont">
+                <img src={comma} alt="comma" />
+                <p>{reviews[1].review}</p>
+                <div className="user">
+                    <h3>{reviews[1].name}</h3>
+                    <h4>{reviews[1].designation}</h4>
+                </div>
+            </div>
+            <div className="img">
+                <img src={reviews[1].image} alt={reviews[1].name} />
+            </div>
+        </div>
+        <div className="review-box box box3">
+            <div className="cont">
+                <img src={comma} alt="comma" />
+                <p>{reviews[2].review}</p>
+                <div className="user">
+                    <h3>{reviews[2].name}</h3>
+                    <h4>{reviews[2].designation}</h4>
+                </div>
+            </div>
+            <div className="img">
+                <img src={reviews[2].image} alt={reviews[2].name} />
+            </div>
+        </div>
+        <div className="rev-navigation">
+          <div className="rev-btn rev1" onClick={() => handleNavigate(1)}></div>
+          <div className="rev-btn rev2" onClick={() => handleNavigate(2)}></div>
+          <div className="rev-btn rev3" onClick={() => handleNavigate(3)}></div>
+        </div>
+      </div>
       
     </div>
   )
